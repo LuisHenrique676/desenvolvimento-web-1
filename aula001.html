@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let precoInformado = "120";
+    let quantidadeInformada = "2";
+
+    let preco = Number(precoInformado);
+    let quantidade = Number(quantidadeInformada);
+
+    let etradaInvalida = Number.isNaN(preco) || Number.isNaN(quantidade) || preco <= 0 || quantidade <= 0;
+    
+    if(entradaInvalida){
+        alert("Deu ruim!");
+    }else{
+        let valorTotal = preco * quantidade;
+        let valorDesconto;
+        if(valorTotal >= 200){
+            valorDesconto = valorTotal * 0.90;
+        }else{
+            valorDesconto = valorTotal
+        }
+        alert("Sua compra ficou em R$ " + valorTotal);
+    }
+
+
+
+
+    </script>
+</body>
+</html>
